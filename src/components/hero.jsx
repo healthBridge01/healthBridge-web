@@ -5,11 +5,9 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative pt-20 md:pt-32 overflow-hidden bg-white">
-      {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[400px] md:h-[500px] bg-[radial-gradient(50%_50%_at_50%_0%,rgba(26,63,212,0.06)_0%,rgba(255,255,255,0)_100%)] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-100px md:h-125 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(26,63,212,0.06)_0%,rgba(255,255,255,0)_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10 text-center">
-        {/* Headline: Mobile text size is significantly smaller in Figma (text-3xl) */}
         <h1 className="text-[32px] md:text-6xl font-bold text-gray-900 leading-[1.2] md:leading-[1.15] tracking-tight max-w-4xl mx-auto">
           Healthcare Made{" "}
           <span className="text-brand-blue italic font-serif font-medium">
@@ -19,14 +17,13 @@ export default function Hero() {
           <br className="hidden md:block" /> Secure, and Connected.
         </h1>
 
-        {/* Paragraph: Mobile text-sm, Desktop text-lg */}
-        <p className="mt-5 text-gray-500 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed px-2 md:px-4 font-normal">
+        <p className="mt-5 text-gray-700 text-sm md:text-lg max-w-5xl mx-auto leading-relaxed px-2 md:px-4 font-normal">
           OHealth is a digital healthcare platform that connects you with
           verified healthcare professionals, lets you book consultations and lab
-          tests online.
+          tests online, and securely manage all your health records in one
+          place.
         </p>
 
-        {/* Primary Actions: Stacked on mobile, row on desktop */}
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Link
             href="#"
@@ -45,20 +42,18 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Mockup Container: Scaled for mobile */}
         <div className="mt-10 md:mt-16 flex justify-center relative px-2">
-          {/* Mobile-adjusted glow: slightly smaller radius */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[70%] bg-brand-blue/20 blur-[80px] md:blur-[140px] rounded-full pointer-events-none" />
 
-          <div className="relative w-full max-w-[340px] md:max-w-[900px] z-10">
+          <div className="relative w-full max-w-85 md:max-w-225 z-10">
             <Image
-              src="/images/comp-01.png"
+              src="comp-01_gpjgmk.png"
               alt="OHealth app interface"
               width={1200}
               height={800}
               className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)]"
               priority
-              sizes="(max-width: 768px) 100vw, 80vw"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
           </div>
         </div>

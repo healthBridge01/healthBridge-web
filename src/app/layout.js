@@ -1,4 +1,3 @@
-// app/layout.jsx
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 

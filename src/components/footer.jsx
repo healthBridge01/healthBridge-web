@@ -1,4 +1,3 @@
-// components/Footer.jsx
 import Link from "next/link";
 import Image from "next/image";
 
@@ -48,7 +47,6 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-100 px-10 py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-
         <div className="max-w-sm">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
@@ -64,59 +62,66 @@ export default function Footer() {
             place.
           </p>
 
-          <div className="mt-6 flex gap-6 flex-wrap text-sm text-gray-600 font-medium">
-            {["Product", "FAQs", "Terms and Conditions", "Privacy Policy"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="hover:text-blue-600 transition-colors"
-                >
-                  {item}
-                </Link>
-              )
-            )}
+          <div className="mt-8 grid grid-cols-2 gap-y-4 gap-x-8 md:flex md:gap-6 text-[14px] text-gray-600 font-medium">
+            {[
+              "Product",
+              "Careers",
+              "FAQs",
+              "Terms & Conditions",
+              "Contact",
+              "Privacy Policy",
+            ].map((item) => (
+              <Link
+                key={item}
+                href="#"
+                className="hover:text-blue-600 transition-colors whitespace-nowrap"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
           <p className="text-sm font-bold text-gray-900">Get the app</p>
-
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-xl w-48 hover:bg-gray-800 transition-colors"
-          >
-            <AppleIcon />
-            <div>
-              <div className="text-[9px] opacity-70 leading-none">
-                Download on the
+          <div className="flex flex-col sm:flex-row md:flex-col gap-3">
+            <Link
+              href="#"
+              className="flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-xl w-44 hover:bg-gray-800 transition-colors"
+            >
+              <AppleIcon />
+              <div className="text-left">
+                <div className="text-[9px] opacity-70 leading-none uppercase">
+                  Download on the
+                </div>
+                <div className="text-sm font-bold leading-tight">App Store</div>
               </div>
-              <div className="text-sm font-bold leading-tight">App Store</div>
-            </div>
-          </Link>
+            </Link>
 
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-xl w-48 hover:bg-gray-800 transition-colors"
-          >
-            <PlayIcon />
-            <div>
-              <div className="text-[9px] opacity-70 leading-none">
-                GET IT ON
+            <Link
+              href="#"
+              className="flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-xl w-44 hover:bg-gray-800 transition-colors"
+            >
+              <PlayIcon />
+              <div className="text-left">
+                <div className="text-[9px] opacity-70 leading-none uppercase">
+                  GET IT ON
+                </div>
+                <div className="text-sm font-bold leading-tight">
+                  Google Play
+                </div>
               </div>
-              <div className="text-sm font-bold leading-tight">Google Play</div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-100 flex flex-col-reverse md:flex-row justify-between items-center gap-4">
         <p className="text-xs text-gray-400">
           © 2026 OHealth LTD. All rights reserved.
         </p>
 
         <div className="flex gap-5 items-center">
-       
           <Link
             href="#"
             className="text-gray-500 hover:text-gray-900 transition-colors"
@@ -126,7 +131,6 @@ export default function Footer() {
             </svg>
           </Link>
 
-         
           <Link
             href="#"
             className="text-gray-500 hover:text-blue-700 transition-colors"

@@ -1,8 +1,10 @@
-// app/page.js
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import Features from "@/components/features";
 import HowItWorks from "@/components/howItWorks";
+import WhoItsFor from "@/components/whoItsFor";
+import PlatformDesc from "@/components/platformDesc";
+import ForPros from "@/components/forPros";
 import CTA from "@/components/CTA";
 import Footer from "@/components/footer";
 
@@ -11,12 +13,11 @@ export default function Home() {
     <main className="bg-slate-100/50">
       <Navbar />
       <Hero />
-      {/* Replaced 'Spacer' with a simple Tailwind class */}
-      <div className="h-[72px] bg-slate-100/50" aria-hidden="true" />
       <Features />
-      <div className="h-[72px] bg-slate-100/50" aria-hidden="true" />
       <HowItWorks />
-      <div className="h-[72px] bg-slate-100/50" aria-hidden="true" />
+      <WhoItsFor />
+      <PlatformDesc />
+      <ForPros />
       <CTA />
       <Footer />
     </main>
