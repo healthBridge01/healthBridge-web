@@ -1,0 +1,9 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1a3fd4;
+  --color-brand-light: #e8eef6;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
